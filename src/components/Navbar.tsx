@@ -30,7 +30,7 @@ export default function Navbar() {
         <div className="flex justify-between h-16 items-center">
           <Link to="/" className="flex items-center gap-2">
             <img src={logo} alt="VoucherBytes Logo" className="h-8 w-auto object-contain" />
-            <span className="font-bold text-xl tracking-tight">
+            <span className="hidden sm:inline-block font-bold text-xl tracking-tight">
               <span className="text-[#1E3A8A] dark:text-blue-400">Voucher</span>
               <span className="text-[#3B82F6]">Bytes</span>
             </span>
