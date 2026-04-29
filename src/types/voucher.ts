@@ -4,4 +4,5 @@ export interface Voucher {
   category: string;
   price: number;
   description: string;
+  soldOut?: boolean;
 }

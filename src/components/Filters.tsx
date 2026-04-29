@@ -16,7 +16,7 @@ export default function Filters({
   onSearchChange,
 }: FiltersProps) {
   return (
-    <div className="flex flex-col md:flex-row gap-4 w-full bg-white dark:bg-slate-800 p-4 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-700 mb-8">
+    <div className="flex flex-col md:flex-row gap-4 w-full bg-white dark:bg-[#0B1220] p-4 rounded-2xl shadow-sm border border-slate-200 dark:border-blue-900/30 mb-8">
       {/* Search Input */}
       <div className="relative flex-1">
         <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
@@ -24,7 +24,7 @@ export default function Filters({
         </div>
         <input
           type="text"
-          className="block w-full pl-10 pr-3 py-2.5 border border-slate-200 dark:border-slate-600 rounded-xl leading-5 bg-slate-50 dark:bg-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition-colors text-slate-900 dark:text-white"
+          className="block w-full pl-10 pr-3 py-2.5 border border-slate-200 dark:border-blue-900/50 rounded-xl leading-5 bg-slate-50 dark:bg-[#0A0F1F] placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition-colors text-slate-900 dark:text-white"
           placeholder="Search vouchers by name..."
           value={searchQuery}
           onChange={(e) => onSearchChange(e.target.value)}
@@ -37,7 +37,7 @@ export default function Filters({
           <Filter className="h-5 w-5 text-slate-400" />
         </div>
         <select
-          className="block w-full pl-10 pr-10 py-2.5 border border-slate-200 dark:border-slate-600 rounded-xl leading-5 bg-slate-50 dark:bg-slate-900 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm appearance-none cursor-pointer transition-colors text-slate-900 dark:text-white"
+          className="block w-full pl-10 pr-10 py-2.5 border border-slate-200 dark:border-blue-900/50 rounded-xl leading-5 bg-slate-50 dark:bg-[#0A0F1F] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm appearance-none cursor-pointer transition-colors text-slate-900 dark:text-white"
           value={selectedCategory}
           onChange={(e) => onCategoryChange(e.target.value)}
         >

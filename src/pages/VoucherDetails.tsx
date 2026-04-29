@@ -13,14 +13,14 @@ export default function VoucherDetails() {
 
   if (!voucher) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center bg-slate-50 dark:bg-slate-900 p-4">
+      <div className="min-h-screen flex flex-col items-center justify-center bg-transparent p-4">
         <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">Voucher Not Found</h2>
         <p className="text-slate-500 dark:text-slate-400 mb-8 text-center max-w-md">
           The voucher you are looking for does not exist or has been removed.
         </p>
         <Link
           to="/"
-          className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-indigo-600 rounded-xl hover:bg-indigo-500 transition-colors shadow-sm"
+          className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold text-white bg-brand-gradient rounded-xl hover:brightness-110 transition-all shadow-sm"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Home
@@ -30,19 +30,19 @@ export default function VoucherDetails() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-900 transition-colors duration-500 py-12 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen bg-transparent transition-colors duration-500 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-3xl mx-auto">
         <Link
           to="/"
-          className="inline-flex items-center gap-2 text-sm font-semibold text-indigo-600 dark:text-indigo-400 hover:text-indigo-800 dark:hover:text-indigo-300 mb-8 transition-colors"
+          className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 mb-8 transition-colors"
         >
           <ArrowLeft className="w-4 h-4" />
           Back to Vouchers
         </Link>
 
-        <div className="bg-white dark:bg-slate-800 rounded-3xl shadow-xl border border-slate-200 dark:border-slate-700 overflow-hidden">
+        <div className="bg-white dark:bg-[#0B1220] rounded-3xl shadow-xl dark:shadow-[0_0_20px_rgba(59,130,246,0.1)] border border-slate-200 dark:border-blue-900/30 overflow-hidden">
           {/* Header */}
-          <div className="bg-indigo-600 dark:bg-indigo-900 p-8 sm:p-10 text-white relative overflow-hidden">
+          <div className="bg-brand-gradient p-8 sm:p-10 text-white relative overflow-hidden">
             <div className="absolute top-0 right-0 -mt-4 -mr-4 w-32 h-32 bg-white/10 rounded-full blur-2xl"></div>
             <div className="relative z-10 flex flex-col sm:flex-row justify-between items-start gap-6">
               <div className="flex flex-col gap-4">
@@ -95,11 +95,11 @@ export default function VoucherDetails() {
                   </h3>
                   <ul className="space-y-2">
                     <li className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
-                      <CheckCircle2 className="w-5 h-5 text-green-500" />
+                      <CheckCircle2 className="w-5 h-5 text-blue-500" />
                       100% Genuine Exam Voucher Code
                     </li>
                     <li className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
-                      <CheckCircle2 className="w-5 h-5 text-green-500" />
+                      <CheckCircle2 className="w-5 h-5 text-blue-500" />
                       1 Year Validity
                     </li>
                     <li className="flex items-center gap-3 text-slate-600 dark:text-slate-300">
@@ -111,22 +111,31 @@ export default function VoucherDetails() {
               </div>
 
               {/* Pricing Card */}
-              <div className="w-full sm:w-72 bg-slate-50 dark:bg-slate-800/50 p-6 rounded-2xl border border-slate-200 dark:border-slate-700 text-center">
+              <div className="w-full sm:w-72 bg-slate-50 dark:bg-[#0B1220] p-6 rounded-2xl border border-slate-200 dark:border-blue-900/50 text-center dark:shadow-[0_0_15px_rgba(59,130,246,0.05)]">
                 <div className="text-slate-500 dark:text-slate-400 text-sm font-medium mb-1">
                   Price
                 </div>
                 <div className="text-4xl font-extrabold text-slate-900 dark:text-white mb-6">
                   ${voucher.price}
                 </div>
-                <a
-                  href={`https://wa.link/5hj3kj?text=Hi! I am interested in purchasing the ${encodeURIComponent(voucher.name)} (${voucher.category}).`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-bold text-white bg-[#25D366] rounded-xl hover:bg-[#20bd5a] transition-all hover:scale-[1.02] active:scale-[0.98] shadow-md shadow-emerald-200 dark:shadow-none"
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  Buy via WhatsApp
-                </a>
+                {voucher.soldOut ? (
+                  <button
+                    disabled
+                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-bold text-slate-500 bg-slate-200 dark:bg-slate-800 dark:text-slate-400 rounded-xl cursor-not-allowed shadow-none"
+                  >
+                    Out of Stock
+                  </button>
+                ) : (
+                  <a
+                    href={`https://wa.link/5hj3kj?text=Hi! I am interested in purchasing the ${encodeURIComponent(voucher.name)} (${voucher.category}).`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 text-base font-bold text-white bg-[#25D366] rounded-xl hover:bg-[#20bd5a] transition-all hover:scale-[1.02] active:scale-[0.98] shadow-md shadow-emerald-200/50 dark:shadow-[0_0_15px_rgba(37,211,102,0.15)]"
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                    Buy via WhatsApp
+                  </a>
+                )}
                 <p className="mt-4 text-xs text-slate-500 dark:text-slate-400">
                   Secure checkout. Instant delivery.
                 </p>
