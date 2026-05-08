@@ -2,6 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import VoucherDetails from './pages/VoucherDetails';
+import AboutUs from './pages/AboutUs';
+import PolicyAgreements from './pages/PolicyAgreements';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
 
@@ -14,6 +16,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/voucher/:id" element={<VoucherDetails />} />
+            <Route path="/about" element={<AboutUs />} />
+            <Route path="/policy" element={<PolicyAgreements />} />
           </Routes>
         </main>
         <Footer />

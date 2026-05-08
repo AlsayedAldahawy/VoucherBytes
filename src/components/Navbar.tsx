@@ -44,6 +44,20 @@ export default function Navbar() {
               Home
             </Link>
 
+            <Link
+              to="/about"
+              className="text-sm font-semibold leading-6 text-slate-700 hover:text-blue-600 dark:text-slate-200 dark:hover:text-blue-400 transition-colors"
+            >
+              About
+            </Link>
+
+            <Link
+              to="/policy"
+              className="text-sm font-semibold leading-6 text-slate-700 hover:text-blue-600 dark:text-slate-200 dark:hover:text-blue-400 transition-colors"
+            >
+              Policy
+            </Link>
+
             <a
               href={Contacts.whatsappLink}
               target="_blank"

@@ -7,7 +7,7 @@ export default function Footer() {
   return (
     <footer className="bg-white dark:bg-[#0A0F1F] border-t border-slate-200 dark:border-blue-900/30 mt-auto">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           <div className="col-span-1 md:col-span-2 space-y-4">
             <Link to="/" className="flex items-center gap-2">
               <img src={logo} alt="VoucherBytes Logo" className="h-8 w-auto object-contain" />
@@ -66,6 +66,10 @@ export default function Footer() {
           <p className="text-sm text-slate-500 dark:text-slate-400">
             © {new Date().getFullYear()} VoucherBytes. All rights reserved.
           </p>
+          <div className="flex items-center gap-6">
+            <Link to="/about" className="text-sm text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">About Us</Link>
+            <Link to="/policy" className="text-sm text-slate-500 hover:text-blue-600 dark:text-slate-400 dark:hover:text-blue-400 transition-colors">Policy & Agreements</Link>
+          </div>
         </div>
       </div>
     </footer>
