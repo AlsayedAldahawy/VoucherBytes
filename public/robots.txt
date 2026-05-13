@@ -1,0 +1,9 @@
+# VoucherBytes Robots.txt
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /policy
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://voucherbytes.com/sitemap.xml
