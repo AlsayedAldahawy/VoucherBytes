@@ -4,6 +4,7 @@ import Home from './pages/Home';
 import VoucherDetails from './pages/VoucherDetails';
 import AboutUs from './pages/AboutUs';
 import PolicyAgreements from './pages/PolicyAgreements';
+import ProviderPage from './pages/ProviderPage';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
 
@@ -18,6 +19,7 @@ function App() {
             <Route path="/voucher/:id" element={<VoucherDetails />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/policy" element={<PolicyAgreements />} />
+            <Route path="/:providerSlug" element={<ProviderPage />} />
           </Routes>
         </main>
         <Footer />

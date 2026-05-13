@@ -6,7 +6,8 @@ const Contacts =
     phoneString: "+2 015 554 16629",
     whatsappLink: "https://wa.link/5hj3kj",
     linkedIn: "https://linkedin.com/company/voucherbytes",
-    instagram: "https://instagram.com/voucherbytes"
+    instagram: "https://instagram.com/voucherbytes",
+    facebook: "https://www.facebook.com/share/18C1Juasob/"
 }
 
 

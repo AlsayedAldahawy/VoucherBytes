@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import type { Voucher } from '../types/voucher';
 import { ArrowRight, Tag } from 'lucide-react';
-import { getCategoryLogo, categoryDomains } from '../utils/logos';
+import { getCategoryLogo, categoryDomains, getProviderSlug } from '../utils/logos';
 
 interface VoucherCardProps {
   voucher: Voucher;
@@ -10,6 +10,7 @@ interface VoucherCardProps {
 export default function VoucherCard({ voucher }: VoucherCardProps) {
   const logoUrl = getCategoryLogo(voucher.category);
   const domain = categoryDomains[voucher.category];
+  const providerSlug = getProviderSlug(voucher.category);
 
   return (
     <div className={`group relative flex flex-col bg-white dark:bg-[#0B1220] rounded-2xl shadow-sm hover:shadow-xl dark:shadow-none hover:dark:shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-all duration-300 border border-slate-200 dark:border-blue-900/30 overflow-hidden ${voucher.soldOut ? 'opacity-75 grayscale-[0.5]' : ''}`}>
@@ -18,10 +19,22 @@ export default function VoucherCard({ voucher }: VoucherCardProps) {
         <div className="flex justify-between items-start mb-4">
           <div className="flex flex-col gap-2">
             <div className="flex flex-wrap gap-2 items-center">
-              <span className="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-blue-50 text-blue-700 dark:bg-blue-500/10 dark:text-blue-400 w-fit">
-                <Tag className="w-3.5 h-3.5" />
-                {voucher.category}
-              </span>
+              {providerSlug ? (
+                <Link
+                  to={`/${providerSlug}`}
+                  className="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-blue-50 text-blue-700 dark:bg-blue-500/10 dark:text-blue-400 w-fit hover:bg-blue-100 dark:hover:bg-blue-500/20 transition-colors cursor-pointer"
+                  title={`Browse ${voucher.category} vouchers`}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <Tag className="w-3.5 h-3.5" />
+                  {voucher.category}
+                </Link>
+              ) : (
+                <span className="inline-flex items-center gap-1.5 py-1.5 px-3 rounded-full text-xs font-medium bg-blue-50 text-blue-700 dark:bg-blue-500/10 dark:text-blue-400 w-fit">
+                  <Tag className="w-3.5 h-3.5" />
+                  {voucher.category}
+                </span>
+              )}
               {voucher.soldOut && (
                 <span className="inline-flex items-center px-2.5 py-1.5 rounded-full text-xs font-bold bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400 border border-red-200 dark:border-red-800/50 w-fit">
                   Sold Out

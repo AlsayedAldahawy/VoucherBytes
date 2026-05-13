@@ -1,8 +1,11 @@
 import { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import VoucherCard from '../components/VoucherCard';
 import Filters from '../components/Filters';
 import LogoMarquee from '../components/LogoMarquee';
 import data from '../data/vouchers.json';
+import { categorySlugs, getCategoryLogo } from '../utils/logos';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -21,6 +24,8 @@ export default function Home() {
     });
   }, [searchQuery, selectedCategory]);
 
+  const providerEntries = Object.entries(categorySlugs);
+
   return (
     <div className="min-h-screen bg-transparent transition-colors duration-500">
       {/* Hero Section */}
@@ -37,6 +42,43 @@ export default function Home() {
       </div>
 
       <LogoMarquee />
+
+      {/* Browse by Provider */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="text-center mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-900 dark:text-white mb-2">
+            Browse by Provider
+          </h2>
+          <p className="text-slate-500 dark:text-slate-400">
+            Find discounted exam vouchers from leading certification providers.
+          </p>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+          {providerEntries.map(([name, slug]) => {
+            const logoUrl = getCategoryLogo(name);
+            return (
+              <Link
+                key={slug}
+                to={`/${slug}`}
+                className="group flex items-center gap-3 p-4 bg-white dark:bg-[#111827] rounded-xl border border-slate-200 dark:border-blue-900/30 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
+              >
+                {logoUrl && (
+                  <div className="w-9 h-9 bg-slate-50 dark:bg-slate-800 rounded-lg flex items-center justify-center p-1.5 flex-shrink-0">
+                    <img
+                      src={logoUrl}
+                      alt={`${name} logo`}
+                      className="h-6 w-auto object-contain"
+                      onError={(e) => { e.currentTarget.style.display = 'none'; }}
+                    />
+                  </div>
+                )}
+                <span className="font-semibold text-sm text-slate-800 dark:text-white truncate flex-1">{name}</span>
+                <ArrowRight className="w-4 h-4 text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 group-hover:translate-x-0.5 transition-all flex-shrink-0" />
+              </Link>
+            );
+          })}
+        </div>
+      </div>
 
       {/* Main Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 relative z-10 pb-20">
