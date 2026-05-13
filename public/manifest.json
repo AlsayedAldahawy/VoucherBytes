@@ -1,0 +1,21 @@
+{
+  "name": "VoucherBytes",
+  "short_name": "VoucherBytes",
+  "description": "Discover the best promo codes, discount vouchers, and exclusive deals. Save more with Voucher Bytes.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#2563EB",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "48x48",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
