@@ -6,7 +6,8 @@
       "category": "CompTIA",
       "price": 180,
       "description": "CompTIA A+ certification exam voucher for establishing a career in IT.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "a-exam-voucher-voucher"
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "category": "CompTIA",
       "price": 220,
       "description": "Validate your networking skills with the CompTIA Network+ exam voucher.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "network-exam-voucher-voucher"
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "category": "CompTIA",
       "price": 220,
       "description": "Baseline certification for cybersecurity professionals.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "security-exam-voucher-voucher"
     },
     {
       "id": 4,
@@ -30,7 +33,8 @@
       "category": "CompTIA",
       "price": 250,
       "description": "Advanced cybersecurity certification voucher.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "casp-exam-voucher-voucher"
     },
     {
       "id": 5,
@@ -38,7 +42,8 @@
       "category": "CompTIA",
       "price": 300,
       "description": "Next-level security certification exam voucher.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "securityx-exam-voucher-voucher"
     },
     {
       "id": 6,
@@ -46,7 +51,8 @@
       "category": "CompTIA",
       "price": 220,
       "description": "Cybersecurity Analyst certification exam voucher.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "cysa-exam-voucher-voucher"
     },
     {
       "id": 7,
@@ -54,7 +60,8 @@
       "category": "CompTIA",
       "price": 220,
       "description": "Validate your Linux system administration skills.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "linux-exam-voucher-voucher"
     },
     {
       "id": 8,
@@ -62,7 +69,8 @@
       "category": "CompTIA",
       "price": 220,
       "description": "Certification for server support and administration.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "server-exam-voucher-voucher"
     },
     {
       "id": 9,
@@ -70,7 +78,8 @@
       "category": "CompTIA",
       "price": 220,
       "description": "Manage small to medium-sized projects effectively.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "project-exam-voucher-voucher"
     },
     {
       "id": 10,
@@ -78,7 +87,8 @@
       "category": "CompTIA",
       "price": 250,
       "description": "Certification for penetration testing and vulnerability management.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "pentest-exam-voucher-voucher"
     },
     {
       "id": 11,
@@ -86,7 +96,8 @@
       "category": "CompTIA",
       "price": 200,
       "description": "Data systems management and administration.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "datasys-exam-voucher-voucher"
     },
     {
       "id": 12,
@@ -94,7 +105,8 @@
       "category": "CompTIA",
       "price": 200,
       "description": "Validate foundational skills in Data and Artificial Intelligence.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "dataai-exam-voucher-voucher"
     },
     {
       "id": 13,
@@ -102,7 +114,8 @@
       "category": "CompTIA",
       "price": 200,
       "description": "Data analytics certification voucher.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "data-exam-voucher-voucher"
     },
     {
       "id": 14,
@@ -110,7 +123,8 @@
       "category": "CompTIA",
       "price": 220,
       "description": "Cloud computing certification voucher.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "cloud-exam-voucher-voucher"
     },
     {
       "id": 15,
@@ -118,7 +132,8 @@
       "category": "CompTIA",
       "price": 220,
       "description": "Advanced cloud network architecture certification.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "cloudnetx-voucher-voucher"
     },
     {
       "id": 16,
@@ -126,7 +141,8 @@
       "category": "CompTIA",
       "price": 200,
       "description": "Foundational technology concepts certification.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "tech-exam-voucher-voucher"
     },
     {
       "id": 17,
@@ -134,7 +150,8 @@
       "category": "CompTIA",
       "price": 180,
       "description": "IT Fundamentals certification exam voucher.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "itf-exam-voucher-voucher"
     },
     {
       "id": 18,
@@ -142,7 +159,8 @@
       "category": "Microsoft",
       "price": 55,
       "description": "Valid for standard Microsoft associate and expert level exams.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "microsoft-azure-generic-md-mb-ms-ai-az-pl-sc-xxx-voucher-voucher"
     },
     {
       "id": 19,
@@ -150,7 +168,8 @@
       "category": "ITIL",
       "price": 400,
       "description": "ITIL 4 Foundation certification exam voucher with online proctoring.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "itil-4-foundation-exam-voucher-voucher"
     },
     {
       "id": 20,
@@ -158,7 +177,8 @@
       "category": "PRINCE2",
       "price": 500,
       "description": "PRINCE2 project management certification exam voucher.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "prince2-7-prince2-agile-exam-voucher-voucher"
     },
     {
       "id": 21,
@@ -166,7 +186,8 @@
       "category": "Google Cloud",
       "price": 90,
       "description": "Voucher for Google Cloud certification exams.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "google-cloud-exam-voucher-voucher"
     },
     {
       "id": 22,
@@ -174,7 +195,8 @@
       "category": "Fortinet",
       "price": 100,
       "description": "Valid for various Fortinet Network Security Expert exams.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "fortinet-nse-4-nse-5-nse-6-nse-7-nse-8-exam-voucher-voucher"
     },
     {
       "id": 23,
@@ -182,7 +204,8 @@
       "category": "AWS",
       "price": 75,
       "description": "Valid for AWS Associate exam.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "aws-associate-exam-voucher-voucher"
     },
     {
       "id": 24,
@@ -190,7 +213,8 @@
       "category": "AWS",
       "price": 50,
       "description": "Valid for AWS practitioner  exam.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "aws-practitioner-exam-voucher-voucher"
     },
     {
       "id": 25,
@@ -198,7 +222,8 @@
       "category": "Oracle",
       "price": 160,
       "description": "Oracle certification exam voucher.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "oracle-exam-attempt-voucher-voucher"
     },
     {
       "id": 26,
@@ -206,7 +231,8 @@
       "category": "Check Point",
       "price": 260,
       "description": "Check Point Security Administrator or Engineering exam voucher.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "check-point-ccsa-ccse-exam-voucher-voucher"
     },
     {
       "id": 27,
@@ -214,7 +240,8 @@
       "category": "Dell EMC",
       "price": 230,
       "description": "Dell EMC Proven Professional certification voucher.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "dell-emc-exam-voucher-voucher"
     },
     {
       "id": 28,
@@ -222,7 +249,8 @@
       "category": "Cisco",
       "price": 300,
       "description": "Cisco Certified Network Associate exam voucher.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "200-301-ccna-voucher-voucher"
     },
     {
       "id": 29,
@@ -230,7 +258,8 @@
       "category": "Cisco",
       "price": 300,
       "description": "Cisco Associate/Professional level exam voucher.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "200-300-xxx-voucher-voucher"
     },
     {
       "id": 30,
@@ -238,7 +267,8 @@
       "category": "Cisco",
       "price": 400,
       "description": "Cisco Core/Expert level exam voucher.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "350-400-xxx-voucher-voucher"
     },
     {
       "id": 31,
@@ -246,7 +276,8 @@
       "category": "Cisco",
       "price": 300,
       "description": "Cisco Channel Partner level exam voucher.",
-      "soldOut": false
+      "soldOut": false,
+      "slug": "500-820-xxx-voucher-voucher"
     }
   ]
 }

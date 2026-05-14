@@ -79,7 +79,7 @@ export default function VoucherCard({ voucher }: VoucherCardProps) {
             </button>
           ) : (
             <Link
-              to={`/voucher/${voucher.id}`}
+              to={`/vouchers/${voucher.slug}`}
               className="inline-flex items-center justify-center w-full gap-2 px-4 py-2 text-sm font-semibold text-white bg-brand-gradient hover:brightness-110 rounded-xl transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 shadow-sm border border-transparent dark:border-blue-500/30"
             >
               View Details
