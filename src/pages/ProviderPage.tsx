@@ -82,7 +82,7 @@ export default function ProviderPage() {
                 <img
                   src={logoUrl}
                   alt={`${provider.providerName} logo`}
-                  className="h-10 w-auto object-contain brightness-0 invert"
+                  className={`h-10 w-auto object-contain brightness-0 invert`}
                   onError={(e) => { e.currentTarget.style.display = 'none'; }}
                 />
               </div>
@@ -214,15 +214,13 @@ export default function ProviderPage() {
                 >
                   <span className="font-semibold text-slate-900 dark:text-white pr-4">{faq.question}</span>
                   <ChevronDown
-                    className={`w-5 h-5 text-slate-400 dark:text-slate-500 flex-shrink-0 transition-transform duration-300 ${
-                      openFaq === index ? 'rotate-180' : ''
-                    }`}
+                    className={`w-5 h-5 text-slate-400 dark:text-slate-500 flex-shrink-0 transition-transform duration-300 ${openFaq === index ? 'rotate-180' : ''
+                      }`}
                   />
                 </button>
                 <div
-                  className={`overflow-hidden transition-all duration-300 ${
-                    openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                  }`}
+                  className={`overflow-hidden transition-all duration-300 ${openFaq === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                    }`}
                 >
                   <div className="px-6 pb-6 text-slate-600 dark:text-slate-300 leading-relaxed">
                     {faq.answer}

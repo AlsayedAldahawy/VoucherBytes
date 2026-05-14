@@ -26,7 +26,20 @@ export const categorySlugs: Record<string, string> = {
   'Cisco': 'cisco-exam-vouchers',
 };
 
+import awsLogo from '../assets/logos/aws.png';
+import ciscoLogo from '../assets/logos/cisco.png';
+import dellLogo from '../assets/logos/dell.png';
+
+export const customLogos: Record<string, string> = {
+  'AWS': awsLogo,
+  'Cisco': ciscoLogo,
+  'Dell EMC': dellLogo,
+};
+
 export const getCategoryLogo = (category: string) => {
+  if (customLogos[category]) {
+    return customLogos[category];
+  }
   const domain = categoryDomains[category];
   // Using icon.horse which is more reliable and doesn't require auth
   // Fallback to Google favicons if needed, but icon.horse provides larger icons
