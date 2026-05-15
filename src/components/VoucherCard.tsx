@@ -11,6 +11,8 @@ export default function VoucherCard({ voucher }: VoucherCardProps) {
   const logoUrl = getCategoryLogo(voucher.category);
   const domain = categoryDomains[voucher.category];
   const providerSlug = getProviderSlug(voucher.category);
+  const hasDiscount = voucher.discount && voucher.discount > 0;
+  const discountedPrice = hasDiscount ? Math.round(voucher.price * (1 - voucher.discount!)) : voucher.price;
 
   return (
     <div className={`group relative flex flex-col bg-white dark:bg-[#0B1220] rounded-2xl shadow-sm hover:shadow-xl dark:shadow-none hover:dark:shadow-[0_0_20px_rgba(59,130,246,0.15)] transition-all duration-300 border border-slate-200 dark:border-blue-900/30 overflow-hidden ${voucher.soldOut ? 'opacity-75 grayscale-[0.5]' : ''}`}>
@@ -35,6 +37,11 @@ export default function VoucherCard({ voucher }: VoucherCardProps) {
                   {voucher.category}
                 </span>
               )}
+              {hasDiscount && !voucher.soldOut && (
+                <span className="inline-flex items-center px-2.5 py-1.5 rounded-full text-xs font-bold bg-brand-gradient text-white shadow-sm w-fit animate-pulse">
+                  🔥 {Math.round(voucher.discount! * 100)}% OFF
+                </span>
+              )}
               {voucher.soldOut && (
                 <span className="inline-flex items-center px-2.5 py-1.5 rounded-full text-xs font-bold bg-red-100 text-red-800 dark:bg-red-900/30 dark:text-red-400 border border-red-200 dark:border-red-800/50 w-fit">
                   Sold Out
@@ -56,9 +63,16 @@ export default function VoucherCard({ voucher }: VoucherCardProps) {
               />
             )}
           </div>
-          <span className="text-lg font-bold text-slate-900 dark:text-white">
-            ${voucher.price}
-          </span>
+          <div className="flex flex-col items-end">
+            {hasDiscount && (
+              <span className="text-sm font-medium text-slate-400 dark:text-slate-500 line-through">
+                ${voucher.price}
+              </span>
+            )}
+            <span className="text-lg font-bold text-slate-900 dark:text-white">
+              ${discountedPrice}
+            </span>
+          </div>
         </div>
         
         <h3 className="text-xl font-semibold text-slate-900 dark:text-white mb-2 line-clamp-2">

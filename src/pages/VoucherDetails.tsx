@@ -19,6 +19,10 @@ export default function VoucherDetails() {
   const providerSlug = voucher ? categorySlugs[voucher.category] : null;
   const providerData = providerPages.find((p: ProviderPageData) => p.slug === providerSlug);
 
+  const hasDiscount = voucher?.discount && voucher.discount > 0;
+  const discountedPrice = hasDiscount && voucher ? Math.round(voucher.price * (1 - voucher.discount!)) : voucher?.price;
+  const savings = hasDiscount && voucher ? Math.round(voucher.price * voucher.discount!) : 0;
+
   // Fallback generic FAQs if provider data is missing
   const faqs = providerData?.faqs || [
     { question: 'How do certification vouchers work?', answer: 'After purchase, you receive an alphanumeric voucher code via email. You can enter this code during the checkout process on the official testing provider\'s website (like Pearson VUE) to cover the cost of the exam.' },
@@ -182,11 +186,22 @@ export default function VoucherDetails() {
 
               {/* Pricing Card */}
               <div className="w-full md:w-80 bg-slate-50 dark:bg-[#0B1220] p-6 rounded-2xl border border-slate-200 dark:border-blue-900/50 text-center dark:shadow-[0_0_15px_rgba(59,130,246,0.05)] shrink-0">
+                {hasDiscount && (
+                  <div className="mb-3 inline-flex items-center gap-1.5 px-3 py-1 bg-green-100 text-green-800 dark:bg-green-900/30 dark:text-green-400 rounded-full text-sm font-bold animate-pulse">
+                    <Zap className="w-4 h-4" />
+                    Save ${savings}
+                  </div>
+                )}
                 <div className="text-slate-500 dark:text-slate-400 text-sm font-medium mb-1">
-                  Discounted Price
+                  {hasDiscount ? 'Special Discounted Price' : 'Current Price'}
                 </div>
+                {hasDiscount && (
+                  <div className="text-xl font-medium text-slate-400 dark:text-slate-500 line-through mb-1">
+                    ${voucher.price}
+                  </div>
+                )}
                 <div className="text-4xl font-extrabold text-slate-900 dark:text-white mb-6">
-                  ${voucher.price}
+                  ${discountedPrice}
                 </div>
                 {voucher.soldOut ? (
                   <button

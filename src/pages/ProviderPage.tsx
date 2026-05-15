@@ -6,6 +6,7 @@ import voucherData from '../data/vouchers.json';
 import VoucherCard from '../components/VoucherCard';
 import Contacts from '../data/contacts';
 import { getCategoryLogo } from '../utils/logos';
+import promotions from '../config/promotions';
 
 export default function ProviderPage() {
   const { providerSlug } = useParams<{ providerSlug: string }>();
@@ -86,6 +87,15 @@ export default function ProviderPage() {
                   onError={(e) => { e.currentTarget.style.display = 'none'; }}
                 />
               </div>
+            </div>
+          )}
+          {promotions.showHeroBadge && (
+            <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md text-white text-sm font-semibold shadow-lg animate-fade-in-up">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+              </span>
+              🔥 25% OFF All {provider.providerName} Vouchers
             </div>
           )}
           <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-4 drop-shadow-md">

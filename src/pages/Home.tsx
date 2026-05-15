@@ -6,6 +6,7 @@ import Filters from '../components/Filters';
 import LogoMarquee from '../components/LogoMarquee';
 import data from '../data/vouchers.json';
 import { categorySlugs, getCategoryLogo } from '../utils/logos';
+import promotions from '../config/promotions';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -31,7 +32,16 @@ export default function Home() {
       {/* Hero Section */}
       <div className="relative overflow-hidden bg-brand-gradient pt-16 pb-20 space-y-8">
         <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+          {promotions.showHeroBadge && (
+            <div className="mb-6 inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md text-white text-sm font-semibold shadow-lg animate-fade-in-up">
+              <span className="relative flex h-3 w-3">
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-3 w-3 bg-red-500"></span>
+              </span>
+              {promotions.heroBadgeMessage}
+            </div>
+          )}
           <h1 className="text-4xl md:text-6xl font-extrabold text-white tracking-tight mb-4 drop-shadow-md">
             VoucherBytes
           </h1>
