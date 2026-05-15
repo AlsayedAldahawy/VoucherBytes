@@ -58,15 +58,13 @@ export default function Navbar() {
               Policy
             </Link>
 
-            <a
-              href={Contacts.whatsappLink}
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/contact"
               className="flex items-center gap-1.5 text-sm font-semibold leading-6 text-blue-600 hover:text-blue-500 dark:text-blue-400 dark:hover:text-blue-300 transition-colors"
             >
               <MessageCircle className="w-4 h-4" />
               Contact
-            </a>
+            </Link>
 
             <button
               onClick={toggleTheme}

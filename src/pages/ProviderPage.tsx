@@ -104,15 +104,13 @@ export default function ProviderPage() {
           <p className="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto drop-shadow-sm mb-8">
             {provider.hero.subheading}
           </p>
-          <a
-            href={Contacts.whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/contact"
             className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-blue-700 font-bold rounded-xl hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
             <MessageCircle className="w-5 h-5" />
-            {provider.hero.ctaText}
-          </a>
+            {provider.hero.ctaText.replace('on WhatsApp', '')}
+          </Link>
         </div>
       </div>
 
@@ -295,15 +293,13 @@ export default function ProviderPage() {
           <p className="text-xl text-blue-100 mb-8 drop-shadow-sm">
             Contact us now for the best prices on {provider.providerName} certification exam vouchers.
           </p>
-          <a
-            href={Contacts.whatsappLink}
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to="/contact"
             className="inline-flex items-center gap-2 px-8 py-3.5 bg-white text-blue-700 font-bold rounded-xl hover:bg-blue-50 transition-all duration-300 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
           >
             <MessageCircle className="w-5 h-5" />
-            Contact Us on WhatsApp
-          </a>
+            Contact Us
+          </Link>
         </div>
       </div>
     </div>

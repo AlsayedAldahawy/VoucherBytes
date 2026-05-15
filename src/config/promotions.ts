@@ -6,7 +6,7 @@ export const promotions = {
 
   // Hero Section Badges
   showHeroBadge: true,
-  heroBadgeMessage: '🔥 Save 25% on AWS, Cisco, CompTIA & More',
+  heroBadgeMessage: '🔥 Save 25% on AWS, Microsoft, CompTIA & More',
 };
 
 export default promotions;

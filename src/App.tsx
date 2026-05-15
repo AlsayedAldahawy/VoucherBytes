@@ -5,6 +5,7 @@ import Home from './pages/Home';
 import VoucherDetails from './pages/VoucherDetails';
 import AboutUs from './pages/AboutUs';
 import PolicyAgreements from './pages/PolicyAgreements';
+import ContactUs from './pages/ContactUs';
 import ProviderPage from './pages/ProviderPage';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
@@ -23,6 +24,7 @@ function App() {
             <Route path="/vouchers/:slug" element={<VoucherDetails />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/policy" element={<PolicyAgreements />} />
+            <Route path="/contact" element={<ContactUs />} />
             <Route path="/:providerSlug" element={<ProviderPage />} />
           </Routes>
         </main>
