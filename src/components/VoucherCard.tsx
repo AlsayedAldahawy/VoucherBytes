@@ -11,7 +11,7 @@ export default function VoucherCard({ voucher }: VoucherCardProps) {
   const logoUrl = getCategoryLogo(voucher.category);
   const domain = categoryDomains[voucher.category];
   const providerSlug = getProviderSlug(voucher.category);
-  const hasDiscount = voucher.discount && voucher.discount > 0;
+  const hasDiscount = (voucher.discount ?? 0) > 0;
   const discountedPrice = hasDiscount ? Math.round(voucher.price * (1 - voucher.discount!)) : voucher.price;
 
   return (

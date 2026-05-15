@@ -274,8 +274,8 @@
       "id": 28,
       "name": "200-301 CCNA Voucher",
       "category": "Cisco",
-      "price": 400,
-      "discount": 0.25,
+      "price": 280,
+      "discount": 0,
       "description": "Cisco Certified Network Associate exam voucher.",
       "soldOut": false,
       "slug": "200-301-ccna-voucher-voucher"
@@ -284,8 +284,8 @@
       "id": 29,
       "name": "200/300-xxx Voucher",
       "category": "Cisco",
-      "price": 400,
-      "discount": 0.25,
+      "price": 280,
+      "discount": 0,
       "description": "Cisco Associate/Professional level exam voucher.",
       "soldOut": false,
       "slug": "200-300-xxx-voucher-voucher"
@@ -294,8 +294,8 @@
       "id": 30,
       "name": "350/400-xxx Voucher",
       "category": "Cisco",
-      "price": 533,
-      "discount": 0.25,
+      "price": 375,
+      "discount": 0,
       "description": "Cisco Core/Expert level exam voucher.",
       "soldOut": false,
       "slug": "350-400-xxx-voucher-voucher"
@@ -304,8 +304,8 @@
       "id": 31,
       "name": "500/820-xxx Voucher",
       "category": "Cisco",
-      "price": 400,
-      "discount": 0.25,
+      "price": 280,
+      "discount": 0,
       "description": "Cisco Channel Partner level exam voucher.",
       "soldOut": false,
       "slug": "500-820-xxx-voucher-voucher"

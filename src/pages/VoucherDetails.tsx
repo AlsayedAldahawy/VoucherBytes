@@ -19,7 +19,7 @@ export default function VoucherDetails() {
   const providerSlug = voucher ? categorySlugs[voucher.category] : null;
   const providerData = providerPages.find((p: ProviderPageData) => p.slug === providerSlug);
 
-  const hasDiscount = voucher?.discount && voucher.discount > 0;
+  const hasDiscount = (voucher?.discount ?? 0) > 0;
   const discountedPrice = hasDiscount && voucher ? Math.round(voucher.price * (1 - voucher.discount!)) : voucher?.price;
   const savings = hasDiscount && voucher ? Math.round(voucher.price * voucher.discount!) : 0;
 
