@@ -4,7 +4,6 @@ import { ChevronDown, CheckCircle2, ArrowRight, Award, ShieldCheck, Zap, Star, M
 import providerPages from '../data/providerPages';
 import voucherData from '../data/vouchers.json';
 import VoucherCard from '../components/VoucherCard';
-import Contacts from '../data/contacts';
 import { getCategoryLogo } from '../utils/logos';
 import promotions from '../config/promotions';
 

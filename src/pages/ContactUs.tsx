@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { Mail, Phone, MessageCircle, MapPin, Globe } from 'lucide-react';
+import { Mail, Phone, MessageCircle } from 'lucide-react';
 import Contacts from '../data/contacts';
 
 export default function ContactUs() {

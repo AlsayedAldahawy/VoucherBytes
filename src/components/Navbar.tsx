@@ -2,7 +2,6 @@ import { Link } from 'react-router-dom';
 import { Moon, Sun, MessageCircle } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import logo from '../assets/voucherBytesLogo.png';
-import Contacts from '../data/contacts';
 
 export default function Navbar() {
   const [isDark, setIsDark] = useState(false);
