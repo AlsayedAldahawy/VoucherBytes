@@ -315,7 +315,7 @@
       "name": "ITIL v5 Foundation Exam Voucher",
       "category": "ITIL",
       "price": 420,
-      "discount": 0.25,
+      "discount": 0,
       "description": "ITIL v5 Foundation certification exam voucher with online proctoring.",
       "soldOut": false,
       "slug": "itil-v5-foundation-exam-voucher-voucher"
