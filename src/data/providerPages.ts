@@ -333,6 +333,7 @@ const providerPages: ProviderPageData[] = [
       { name: 'ITIL 4 Managing Professional (MP)', description: 'Practical and technical knowledge for running IT services.' },
       { name: 'ITIL 4 Strategic Leader (SL)', description: 'How IT influences and directs business strategy.' },
       { name: 'ITIL 4 Master', description: 'Highest level — demonstrate deep ITIL expertise.' },
+      { name: 'ITIL v5 Foundation', description: 'Next-generation framework and principles of IT service management.' },
     ],
     faqs: [
       { question: 'How do ITIL vouchers work?', answer: 'After purchase, use the voucher code to schedule your ITIL exam through the PeopleCert portal.' },

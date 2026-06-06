@@ -309,6 +309,16 @@
       "description": "Cisco Channel Partner level exam voucher.",
       "soldOut": false,
       "slug": "500-820-xxx-voucher-voucher"
+    },
+    {
+      "id": 32,
+      "name": "ITIL v5 Foundation Exam Voucher",
+      "category": "ITIL",
+      "price": 420,
+      "discount": 0.25,
+      "description": "ITIL v5 Foundation certification exam voucher with online proctoring.",
+      "soldOut": false,
+      "slug": "itil-v5-foundation-exam-voucher-voucher"
     }
   ]
 }
